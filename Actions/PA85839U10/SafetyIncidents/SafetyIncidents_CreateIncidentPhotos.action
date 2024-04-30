@@ -1,0 +1,22 @@
+{
+    "ParentLink": {
+        "Property": "incidentPhotos",
+        "Target": {
+            "EntitySet": "SafetyIncidents",
+            "ReadLink": "{@odata.readLink}"
+        }
+    },
+    "OnFailure": "/IncidentReporting/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/IncidentReporting/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "imageType": "#Control:imageType/#Value"
+    },
+    "Target": {
+        "EntitySet": "IncidentPhotos",
+        "Service": "/IncidentReporting/Services/PA85839U10.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateRelatedEntity"
+}

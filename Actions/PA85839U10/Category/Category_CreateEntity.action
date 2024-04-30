@@ -1,0 +1,18 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/IncidentReporting/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/IncidentReporting/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "name": "#Control:name/#Value",
+        "descr": "#Control:descr/#Value",
+        "code": "#Control:code/#Value"
+    },
+    "Target": {
+        "EntitySet": "Category",
+        "Service": "/IncidentReporting/Services/PA85839U10.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

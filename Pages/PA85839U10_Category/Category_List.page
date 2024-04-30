@@ -1,0 +1,61 @@
+{
+    "Caption": "Category",
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/Category/NavToCategory_Create.action",
+            "Position": "right",
+            "SystemItem": "Add"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "Header": {
+
+                "UseTopPadding": false
+            },
+            "ObjectCell": {
+                "AccessoryType": "disclosureIndicator",
+                "Description": "{code}",
+                "DetailImage": "",
+                "DetailImageIsCircular": false,
+                "Icons": [],
+                "OnPress": "/IncidentReporting/Actions/PA85839U10/Category/NavToCategory_Detail.action",
+                "StatusImage": "",
+                "Title": "{name}",
+                "Footnote": "",
+                "PreserveIconStackSpacing": false,
+                "StatusText": "",
+                "Subhead": "{descr}",
+                "SubstatusText": ""
+            },
+            "EmptySection": {
+                "Caption": "No record found!"
+            },
+            "Search": {
+                "Enabled": true,
+                "Placeholder": "Item Search",
+                "BarcodeScanner": true,
+                "Delay": 500,
+                "MinimumCharacterThreshold": 3
+            },
+            "DataPaging": {
+                "ShowLoadingIndicator": true,
+                "LoadingIndicatorText": "Loading more items, please wait..."
+            },
+            "Target": {
+                "EntitySet": "Category",
+                "Service": "/IncidentReporting/Services/PA85839U10.service",
+                "QueryOptions": ""
+            },
+            "_Type": "Section.Type.ObjectTable"
+        }],
+        "LoadingIndicator": {
+            "Enabled": true,
+            "Text": "Loading, please wait..."
+        },
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Category_List"
+}

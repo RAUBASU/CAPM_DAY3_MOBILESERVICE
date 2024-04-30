@@ -1,0 +1,50 @@
+{
+    "Caption": "Update Category Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "Category",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/Category/Category_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                    "Caption": "Name",
+                    "_Name": "name",
+                    "Value": "{name}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "Description",
+                    "_Name": "descr",
+                    "Value": "{descr}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "code",
+                    "_Name": "code",
+                    "Value": "{code}",
+                    "_Type": "Control.Type.FormCell.SimpleProperty",
+                    "IsEditable": false
+                }
+            ]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Category_Edit"
+}

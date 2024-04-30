@@ -1,0 +1,144 @@
+{
+    "Caption": "SafetyIncidents Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "SafetyIncidents",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/NavToSafetyIncidents_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/SafetyIncidents_DetailPopover.action",
+            "Position": "right",
+            "Text": "More"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{title}",
+                "Subhead": "{createdAt}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{modifiedAt}",
+                "Description": "{createdBy}",
+                "StatusText": "{modifiedBy}",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": "{category_code}"
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "Created On",
+                    "Value": "{createdAt}"
+                },
+                {
+                    "KeyName": "Created By",
+                    "Value": "{createdBy}"
+                },
+                {
+                    "KeyName": "Changed On",
+                    "Value": "{modifiedAt}"
+                },
+                {
+                    "KeyName": "Changed By",
+                    "Value": "{modifiedBy}"
+                },
+                {
+                    "KeyName": "Title",
+                    "Value": "{title}"
+                },
+                {
+                    "KeyName": "Category",
+                    "Value": "{category_code}"
+                },
+                {
+                    "KeyName": "Priority",
+                    "Value": "{priority_code}"
+                },
+                {
+                    "KeyName": "IncidentStatus",
+                    "Value": "{incidentStatus_code}"
+                },
+                {
+                    "KeyName": "Description",
+                    "Value": "{description}"
+                },
+                {
+                    "KeyName": "ResolutionDate",
+                    "Value": "{incidentResolutionDate}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }, {
+            "Header": {
+                "Caption": "incidentPhotos"
+            },
+            "ObjectCell": {
+                "AccessoryType": "disclosureIndicator",
+                "Description": "{createdBy}",
+                "DetailImage": "/IncidentReporting/Services/PA85839U10.service/{@odata.readLink}/image",
+                "DetailImageIsCircular": false,
+                "Icons": [],
+                "StatusImage": "",
+                "Title": "{ID}",
+                "Footnote": "{modifiedAt}",
+                "PreserveIconStackSpacing": false,
+                "StatusText": "{modifiedBy}",
+                "Subhead": "{createdAt}",
+                "SubstatusText": "{imageType}",
+                "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentPhotos/NavToIncidentPhotos_Detail.action"
+            },
+            "EmptySection": {
+                "Caption": "No record found!"
+            },
+            "Target": {
+                "EntitySet": "{@odata.readLink}/incidentPhotos",
+                "Service": "/IncidentReporting/Services/PA85839U10.service"
+            },
+            "_Type": "Section.Type.ObjectTable"
+        }, {
+            "Header": {
+                "Caption": "incidentHistory"
+            },
+            "ObjectCell": {
+                "AccessoryType": "disclosureIndicator",
+                "Description": "{createdBy}",
+                "DetailImage": "",
+                "DetailImageIsCircular": false,
+                "Icons": [],
+                "StatusImage": "",
+                "Title": "{ID}",
+                "Footnote": "{modifiedAt}",
+                "PreserveIconStackSpacing": false,
+                "StatusText": "{modifiedBy}",
+                "Subhead": "{createdAt}",
+                "SubstatusText": "{oldStatus_code}",
+                "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentHistory/NavToIncidentHistory_Detail.action"
+            },
+            "EmptySection": {
+                "Caption": "No record found!"
+            },
+            "Target": {
+                "EntitySet": "{@odata.readLink}/incidentHistory",
+                "Service": "/IncidentReporting/Services/PA85839U10.service"
+            },
+            "_Type": "Section.Type.ObjectTable"
+        }],
+        "DataSubscriptions": ["IncidentPhotos", "IncidentHistory"],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "SafetyIncidents_Detail"
+}

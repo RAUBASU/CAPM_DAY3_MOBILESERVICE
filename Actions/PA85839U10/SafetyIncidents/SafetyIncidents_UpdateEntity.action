@@ -1,0 +1,22 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "SafetyIncidents",
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "title": "#Control:title/#Value",
+        "category_code": "#Control:category_code/#SelectedValue",
+        "priority_code": "#Control:priority_code/#SelectedValue",
+        "incidentStatus_code": "#Control:incidentStatus_code/#SelectedValue",
+        "description": "#Control:description/#Value",
+        "incidentResolutionDate": "#Control:incidentResolutionDate/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/IncidentReporting/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/IncidentReporting/Actions/UpdateEntityFailureMessage.action"
+}

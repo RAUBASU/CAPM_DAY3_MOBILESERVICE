@@ -1,0 +1,21 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/IncidentReporting/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/IncidentReporting/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "title": "#Control:title/#Value",
+        "category_code": "#Control:category_code/#SelectedValue",
+        "priority_code": "#Control:priority_code/#SelectedValue",
+        "incidentStatus_code": "#Control:incidentStatus_code/#SelectedValue",
+        "description": "#Control:description/#Value",
+        "incidentResolutionDate": "#Control:incidentResolutionDate/#Value"
+    },
+    "Target": {
+        "EntitySet": "SafetyIncidents",
+        "Service": "/IncidentReporting/Services/PA85839U10.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

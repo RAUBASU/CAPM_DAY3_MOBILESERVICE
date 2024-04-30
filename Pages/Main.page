@@ -1,0 +1,54 @@
+{
+    "Controls": [{
+        "FilterFeedbackBar": {
+            "ShowAllFilters": false,
+            "_Type": "Control.Type.FilterFeedbackBar"
+        },
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable",
+        "Sections": [{
+            "Header": {
+                "_Name": "SectionHeader_PA85839U10",
+                "AccessoryType": "None",
+                "UseTopPadding": true,
+                "Caption": "PA85839U10"
+            },
+            "Separators": {
+                "TopSectionSeparator": false,
+                "BottomSectionSeparator": true,
+                "HeaderSeparator": true,
+                "FooterSeparator": true,
+                "ControlSeparator": true
+            },
+            "Buttons": [{
+                    "OnPress": "/IncidentReporting/Actions/PA85839U10/Category/NavToCategory_List.action",
+                    "TextAlignment": "center",
+                    "Title": "Category"
+                },
+                {
+                    "OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/NavToSafetyIncidents_List.action",
+                    "TextAlignment": "center",
+                    "Title": "SafetyIncidents"
+                }
+            ],
+            "_Name": "SectionButtonTable_PA85839U10",
+            "_Type": "Section.Type.ButtonTable"
+        }]
+    }],
+    "_Name": "Main",
+    "_Type": "Page",
+    "Caption": "Main",
+    "PrefersLargeCaption": true,
+    "ActionBar": {
+        "Items": [{
+            "_Name": "ActionBarItem0",
+            "Caption": "User Menu",
+            "Icon": "sap-icon://customer",
+            "Position": "Right",
+            "IsIconCircular": false,
+            "Visible": true,
+            "OnPress": "/IncidentReporting/Actions/Application/UserMenuPopover.action"
+        }],
+        "_Name": "ActionBar1"
+    }
+}

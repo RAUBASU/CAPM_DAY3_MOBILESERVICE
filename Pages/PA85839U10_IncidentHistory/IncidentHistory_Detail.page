@@ -1,0 +1,74 @@
+{
+    "Caption": "IncidentHistory Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "IncidentHistory",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentHistory/NavToIncidentHistory_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/IncidentReporting/Rules/PA85839U10/IncidentHistory/IncidentHistory_DeleteConfirmation.js",
+            "Position": "right",
+            "SystemItem": "Trash"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{ID}",
+                "Subhead": "{createdAt}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{modifiedAt}",
+                "Description": "{createdBy}",
+                "StatusText": "{modifiedBy}",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": "{oldStatus_code}"
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "Created On",
+                    "Value": "{createdAt}"
+                },
+                {
+                    "KeyName": "Created By",
+                    "Value": "{createdBy}"
+                },
+                {
+                    "KeyName": "Changed On",
+                    "Value": "{modifiedAt}"
+                },
+                {
+                    "KeyName": "Changed By",
+                    "Value": "{modifiedBy}"
+                },
+                {
+                    "KeyName": "OldCategory",
+                    "Value": "{oldStatus_code}"
+                },
+                {
+                    "KeyName": "NewCategory",
+                    "Value": "{newStatus_code}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "DataSubscriptions": [],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "IncidentHistory_Detail"
+}

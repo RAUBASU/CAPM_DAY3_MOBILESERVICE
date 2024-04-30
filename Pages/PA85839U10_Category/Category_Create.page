@@ -1,0 +1,41 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/Category/Category_CreateEntity.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create Category Detail",
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                    "Caption": "Name",
+                    "_Name": "name",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "Description",
+                    "_Name": "descr",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "code",
+                    "_Name": "code",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                }
+            ]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Category_Create"
+}

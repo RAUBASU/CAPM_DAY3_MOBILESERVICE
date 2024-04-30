@@ -1,0 +1,67 @@
+{
+    "Caption": "Update IncidentHistory Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "IncidentHistory",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentHistory/IncidentHistory_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                    "Caption": "OldCategory",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "IncidentStatus",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "Value": "{oldStatus_code}",
+                    "_Name": "oldStatus_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                },
+                {
+                    "Caption": "NewCategory",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "IncidentStatus",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "Value": "{newStatus_code}",
+                    "_Name": "newStatus_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                }
+            ]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "IncidentHistory_Edit"
+}

@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "SafetyIncidents",
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/IncidentReporting/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/IncidentReporting/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

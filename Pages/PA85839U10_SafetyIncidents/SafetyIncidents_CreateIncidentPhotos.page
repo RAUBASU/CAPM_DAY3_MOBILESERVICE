@@ -1,0 +1,47 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/SafetyIncidents_CreateIncidentPhotos.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create IncidentPhotos",
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                    "Caption": "imageType",
+                    "_Name": "imageType",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "AttachmentTitle": "image",
+                    "AttachmentAddTitle": "Browse",
+                    "AttachmentActionType": [
+                        "AddPhoto",
+                        "TakePhoto",
+                        "SelectFile"
+                    ],
+                    "AllowedFileTypes": [
+                        "jpg",
+                        "png",
+                        "gif"
+                    ],
+                    "_Name": "image",
+                    "_Type": "Control.Type.FormCell.Attachment"
+                }
+            ]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "SafetyIncidents_CreateIncidentPhotos"
+}

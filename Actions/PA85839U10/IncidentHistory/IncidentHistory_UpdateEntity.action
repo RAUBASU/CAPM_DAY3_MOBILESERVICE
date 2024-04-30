@@ -1,0 +1,18 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "IncidentHistory",
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "oldStatus_code": "#Control:oldStatus_code/#SelectedValue",
+        "newStatus_code": "#Control:newStatus_code/#SelectedValue"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/IncidentReporting/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/IncidentReporting/Actions/UpdateEntityFailureMessage.action"
+}

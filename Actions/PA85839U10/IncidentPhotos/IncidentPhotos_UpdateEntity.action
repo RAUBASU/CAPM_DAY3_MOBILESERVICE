@@ -1,0 +1,17 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "IncidentPhotos",
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "imageType": "#Control:imageType/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/IncidentReporting/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/IncidentReporting/Actions/UpdateEntityFailureMessage.action"
+}

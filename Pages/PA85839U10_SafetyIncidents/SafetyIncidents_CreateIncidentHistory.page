@@ -1,0 +1,62 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/SafetyIncidents_CreateIncidentHistory.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create IncidentHistory",
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                    "Caption": "OldCategory",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsEditable": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "IncidentStatus",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "_Name": "oldStatus_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                },
+                {
+                    "Caption": "NewCategory",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsEditable": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "IncidentStatus",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "_Name": "newStatus_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                }
+            ]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "SafetyIncidents_CreateIncidentHistory"
+}

@@ -1,0 +1,62 @@
+{
+    "Caption": "Category Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "Category",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/Category/NavToCategory_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/IncidentReporting/Rules/PA85839U10/Category/Category_DeleteConfirmation.js",
+            "Position": "right",
+            "SystemItem": "Trash"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "",
+                "HeadlineText": "{name}",
+                "Subhead": "{descr}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "",
+                "Description": "{code}",
+                "StatusText": "",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": ""
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "Name",
+                    "Value": "{name}"
+                },
+                {
+                    "KeyName": "Description",
+                    "Value": "{descr}"
+                },
+                {
+                    "KeyName": "code",
+                    "Value": "{code}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "DataSubscriptions": [],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "Category_Detail"
+}

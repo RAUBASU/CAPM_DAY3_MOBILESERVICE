@@ -1,0 +1,70 @@
+{
+    "Caption": "IncidentPhotos Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "IncidentPhotos",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentPhotos/NavToIncidentPhotos_Edit.action",
+            "Position": "right",
+            "SystemItem": "Edit"
+        }, {
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentPhotos/IncidentPhotos_DetailPopover.action",
+            "Position": "right",
+            "Text": "More"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "ObjectHeader": {
+                "DetailImage": "/IncidentReporting/Services/PA85839U10.service/{@odata.readLink}/image",
+                "HeadlineText": "{ID}",
+                "Subhead": "{createdAt}",
+                "Tags": [],
+                "BodyText": "",
+                "Footnote": "{modifiedAt}",
+                "Description": "{createdBy}",
+                "StatusText": "{modifiedBy}",
+                "StatusImage": "",
+                "SubstatusImage": "",
+                "SubstatusText": "{imageType}"
+            },
+            "_Type": "Section.Type.ObjectHeader"
+        }, {
+            "KeyAndValues": [{
+                    "KeyName": "Created On",
+                    "Value": "{createdAt}"
+                },
+                {
+                    "KeyName": "Created By",
+                    "Value": "{createdBy}"
+                },
+                {
+                    "KeyName": "Changed On",
+                    "Value": "{modifiedAt}"
+                },
+                {
+                    "KeyName": "Changed By",
+                    "Value": "{modifiedBy}"
+                },
+                {
+                    "KeyName": "imageType",
+                    "Value": "{imageType}"
+                }
+            ],
+            "Layout": {
+                "NumberOfColumns": 2
+            },
+            "MaxItemCount": 1,
+            "_Name": "SectionKeyValue0",
+            "_Type": "Section.Type.KeyValue"
+        }],
+        "DataSubscriptions": [],
+        "_Type": "Control.Type.SectionedTable",
+        "_Name": "SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "IncidentPhotos_Detail"
+}

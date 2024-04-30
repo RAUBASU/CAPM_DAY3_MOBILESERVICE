@@ -1,0 +1,96 @@
+{
+    "ActionBar": {
+        "Items": [{
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action",
+            "Position": "left",
+            "SystemItem": "Cancel"
+        }, {
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/SafetyIncidents_CreateEntity.action",
+            "Position": "right",
+            "SystemItem": "Save"
+        }]
+    },
+    "Caption": "Create SafetyIncidents Detail",
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                    "Caption": "Title",
+                    "_Name": "title",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Caption": "Category",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsEditable": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "Category",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "_Name": "category_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                },
+                {
+                    "Caption": "Priority",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsEditable": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "Priority",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "_Name": "priority_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                },
+                {
+                    "Caption": "IncidentStatus",
+                    "AllowMultipleSelection": false,
+                    "AllowEmptySelection": true,
+                    "IsEditable": true,
+                    "IsPickerDismissedOnSelection": true,
+                    "IsSelectedSectionEnabled": true,
+                    "PickerItems": {
+                        "DisplayValue": "{name}",
+                        "ReturnValue": "{code}",
+                        "Target": {
+                            "EntitySet": "IncidentStatus",
+                            "Service": "/IncidentReporting/Services/PA85839U10.service"
+                        }
+                    },
+                    "_Name": "incidentStatus_code",
+                    "_Type": "Control.Type.FormCell.ListPicker"
+                },
+                {
+                    "Caption": "Description",
+                    "_Name": "description",
+                    "_Type": "Control.Type.FormCell.SimpleProperty"
+                },
+                {
+                    "Mode": "Date",
+                    "_Name": "incidentResolutionDate",
+                    "Caption": "ResolutionDate",
+                    "_Type": "Control.Type.FormCell.DatePicker"
+                }
+            ]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "SafetyIncidents_Create"
+}

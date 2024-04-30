@@ -1,0 +1,36 @@
+{
+    "Caption": "Update IncidentPhotos Detail",
+    "DesignTimeTarget": {
+        "Service": "/IncidentReporting/Services/PA85839U10.service",
+        "EntitySet": "IncidentPhotos",
+        "QueryOptions": ""
+    },
+    "ActionBar": {
+        "Items": [{
+            "Position": "left",
+            "SystemItem": "Cancel",
+            "OnPress": "/IncidentReporting/Actions/CloseModalPage_Cancel.action"
+        }, {
+            "Position": "right",
+            "SystemItem": "Save",
+            "OnPress": "/IncidentReporting/Actions/PA85839U10/IncidentPhotos/IncidentPhotos_UpdateEntity.action"
+        }]
+    },
+    "Controls": [{
+        "Sections": [{
+            "_Type": "Section.Type.FormCell",
+            "_Name": "SectionFormCell0",
+            "Visible": true,
+            "Controls": [{
+                "Caption": "imageType",
+                "_Name": "imageType",
+                "Value": "{imageType}",
+                "_Type": "Control.Type.FormCell.SimpleProperty"
+            }]
+        }],
+        "_Name": "SectionedTable0",
+        "_Type": "Control.Type.SectionedTable"
+    }],
+    "_Type": "Page",
+    "_Name": "IncidentPhotos_Edit"
+}

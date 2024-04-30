@@ -1,0 +1,94 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"Header": {
+						"_Name": "SectionHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": false
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/IncidentReporting/Services/PA85839U10.service",
+						"EntitySet": "SafetyIncidents",
+						"QueryOptions": "$top=10&$expand=category,priority,incidentStatus,incidentPhotos&$orderby=createdAt desc"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"ObjectCell": {
+						"Title": "{title}",
+						"Subhead": "{category/name}",
+						"Footnote": "{category/name}",
+						"Description": "{createdBy}",
+						"StatusText": "{modifiedBy}",
+						"SubstatusText": "{category_code}",
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Selected": false,
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": []
+						}
+					},
+					"HighlightSelectedItem": false
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SafetyIncidents_List",
+	"Caption": "IncidentList",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Add",
+				"Position": "right",
+				"IsIconCircular": false,
+				"OnPress": "/IncidentReporting/Actions/PA85839U10/SafetyIncidents/NavToSafetyIncidents_Create.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"Caption": "Logout",
+				"OnPress": "/IncidentReporting/Actions/Application/Logout.action",
+				"Icon": "res://mdk_logo.png",
+				"Enabled": true,
+				"Clickable": true,
+				"ItemType": "Normal"
+			}
+		]
+	}
+}
